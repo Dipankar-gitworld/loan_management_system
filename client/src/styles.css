@@ -1,0 +1,293 @@
+/* Global styles */
+:root {
+    --primary-color: #4361ee;
+    --primary-dark: #3a56d4;
+    --secondary-color: #7209b7;
+    --success-color: #38b000;
+    --warning-color: #f48c06;
+    --danger-color: #d00000;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #6c757d;
+    --text-color: #212529;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: white;
+    box-shadow: var(--shadow);
+    padding: 15px 20px;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .navbar-logo span {
+    color: var(--secondary-color);
+  }
+  
+  /* Page container */
+  .page-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-top: 30px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--medium-gray);
+    padding-bottom: 15px;
+  }
+  
+  /* Homepage */
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 80vh;
+    text-align: center;
+  }
+  
+  .homepage-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .homepage-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: var(--dark-gray);
+    max-width: 700px;
+  }
+  
+  .homepage-cta {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+  }
+  
+  .homepage-cta:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* Form styles */
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+  }
+  
+  .form-error {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  .form-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+  
+  .button-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .button-primary:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .button-secondary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+  
+  .button-secondary:hover {
+    background-color: #f0f4ff;
+  }
+  
+  /* Ledger View styles */
+  .ledger-container {
+    overflow-x: auto;
+  }
+  
+  .ledger-summary {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .summary-item {
+    text-align: center;
+  }
+  
+  .summary-label {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+  }
+  
+  .summary-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .summary-value.highlight {
+    color: var(--secondary-color);
+  }
+  
+  .ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .ledger-table th, 
+  .ledger-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  
+  .ledger-table th {
+    background-color: var(--light-gray);
+    font-weight: 600;
+  }
+  
+  .ledger-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .ledger-table tr:hover {
+    background-color: #f0f4ff;
+  }
+  
+  .download-button {
+    background-color: var(--success-color);
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .download-button:hover {
+    background-color: #2d9200;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .page-container {
+      padding: 20px;
+    }
+    
+    .form-button-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .button {
+      width: 100%;
+    }
+    
+    .homepage-title {
+      font-size: 2.5rem;
+    }
+    
+    .homepage-subtitle {
+      font-size: 1.2rem;
+    }
+  }
