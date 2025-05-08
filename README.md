@@ -56,7 +56,7 @@ A full-stack application to manage personal loan onboarding, EMI calculation, an
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/loan-management-system.git
+git clone git@github.com:Dipankar-gitworld/loan_management_system.git
 cd loan-management-system
 ```
 
