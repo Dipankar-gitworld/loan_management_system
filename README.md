@@ -94,32 +94,167 @@ Calculates EMI based on loan inputs.
 **Request**
 ```json
 {
-  "loanAmount": 100000,
-  "interestRate": 10,
-  "tenureInMonths": 12,
-  "disbursementDate": "2024-03-15",
-  "repaymentDaysInMonth": [5, 20]
+    "loanAmount": 10000,
+    "interestRate": 10,
+    "tenureInMonths": 10,
+    "disbursementDate": "2025-05-08",
+    "repaymentDaysInMonth": [
+        1,
+        12
+    ]
 }
 ```
 
 **Response**
 ```json
 {
-  "loanAmount": 100000,
-  "interest": 10000,
-  "totalRepayable": 110000,
-  "totalInstallments": 24,
-  "perInstallmentAmount": 4583,
-  "schedule": [
-    {
-      "date": "2024-04-05",
-      "totalInstallment": 4583,
-      "principalComponent": 4167,
-      "interestComponent": 416,
-      "outstandingPrincipal": 95833
-    }
-    // ... more installments
-  ]
+    "loanAmount": 10000,
+    "interest": 834,
+    "totalRepayable": 10834,
+    "totalInstallments": 20,
+    "perInstallmentAmount": 541,
+    "schedule": [
+        {
+            "date": "2025-06-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 9500
+        },
+        {
+            "date": "2025-06-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 9000
+        },
+        {
+            "date": "2025-07-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 8500
+        },
+        {
+            "date": "2025-07-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 8000
+        },
+        {
+            "date": "2025-08-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 7500
+        },
+        {
+            "date": "2025-08-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 7000
+        },
+        {
+            "date": "2025-09-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 6500
+        },
+        {
+            "date": "2025-09-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 6000
+        },
+        {
+            "date": "2025-10-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 5500
+        },
+        {
+            "date": "2025-10-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 5000
+        },
+        {
+            "date": "2025-11-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 4500
+        },
+        {
+            "date": "2025-11-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 4000
+        },
+        {
+            "date": "2025-12-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 3500
+        },
+        {
+            "date": "2025-12-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 3000
+        },
+        {
+            "date": "2026-01-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 2500
+        },
+        {
+            "date": "2026-01-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 2000
+        },
+        {
+            "date": "2026-02-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 1500
+        },
+        {
+            "date": "2026-02-12",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 1000
+        },
+        {
+            "date": "2026-03-01",
+            "totalInstallment": 541,
+            "principalComponent": 500,
+            "interestComponent": 41,
+            "outstandingPrincipal": 500
+        },
+        {
+            "date": "2026-03-12",
+            "totalInstallment": 555,
+            "principalComponent": 500,
+            "interestComponent": 55,
+            "outstandingPrincipal": 0
+        }
+    ]
 }
 ```
 
